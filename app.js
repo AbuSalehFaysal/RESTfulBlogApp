@@ -10,7 +10,8 @@ mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
 mongoose.set("useCreateIndex", true);
 mongoose.set("useUnifiedTopology", true);
-mongoose.connect("mongodb://localhost/RESTfulBlogApp");
+mongoose.connect(process.env.MONGODB_URI);
+// mongoose.connect("mongodb://localhost/RESTfulBlogApp");
 
 //APP CONFIG
 app.set("view engine", "ejs");
@@ -18,7 +19,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressSanitizer());
 app.use(express.static("public"));
 app.use(methodOverride("_method"));
-app.use;
 
 //SCHEMA/MODEL SETUP
 var blogSchema = new mongoose.Schema({
