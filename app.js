@@ -12,6 +12,16 @@ mongoose.set("useCreateIndex", true);
 mongoose.set("useUnifiedTopology", true);
 mongoose.connect(process.env.MONGODB_URI);
 
+// const MongoClient = require("mongodb").MongoClient;
+// const uri =
+//   "mongodb+srv://AbuSalehFaysal:???222asf222???@cluster0.hrxvr.mongodb.net/RESTfulBlogApp?retryWrites=true&w=majority";
+// const client = new MongoClient(uri, { useNewUrlParser: true });
+// client.connect((err) => {
+//   const collection = client.db("RESTfulBlogApp").collection("blogs");
+//   // perform actions on the collection object
+//   client.close();
+// });
+
 //APP CONFIG
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
