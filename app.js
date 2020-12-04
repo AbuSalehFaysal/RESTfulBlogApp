@@ -5,12 +5,14 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const expressSanitizer = require("express-sanitizer");
 
+mongodb+srv://AbuSalehFaysal:???222asf222???@cluster0.hrxvr.mongodb.net/RESTfulBlogApp?retryWrites=true&w=majority
+
 //DATABSE CONNECTION
 mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
 mongoose.set("useCreateIndex", true);
 mongoose.set("useUnifiedTopology", true);
-mongoose.connect("mongodb://localhost/RESTfulBlogApp");
+mongoose.connect(process.env.MONGODB_URI);
 
 //APP CONFIG
 app.set("view engine", "ejs");
