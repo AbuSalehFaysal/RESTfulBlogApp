@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const expressSanitizer = require("express-sanitizer");
 
+mongodb+srv://AbuSalehFaysal:???222asf222???@cluster0.hrxvr.mongodb.net/RESTfulBlogApp?retryWrites=true&w=majority
+
 //DATABSE CONNECTION
 mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
